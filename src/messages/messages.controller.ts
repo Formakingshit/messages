@@ -13,10 +13,7 @@ import { MessagesService } from './messages.service';
 @ApiTags('Messages')
 @Controller('messages')
 export class MessagesController {
-  messagesService: MessagesService;
-  constructor() {
-    this.messagesService = new MessagesService();
-  }
+  constructor(public messagesService: MessagesService) {}
 
   @Get()
   listMessages() {
